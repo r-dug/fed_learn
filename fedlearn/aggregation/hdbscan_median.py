@@ -104,21 +104,19 @@ def estimate_b(grads, n):
     making it robust to non-IID norm variance among honest workers.
     """
     norms = np.linalg.norm(grads, axis=1, keepdims=True)
-    # hdb = SklearnHDBSCAN(metric='cosine',
-    #                      cluster_selection_method='eom',
-    #                      allow_single_cluster=True,
-    #                      copy=True)
-    
-    hdb2 = CumlHDBSCAN(metric='l2',
-                         cluster_selection_method='eom',
-                         allow_single_cluster=True,
-                         copy=True)
-    
-    # cosine_outliers = hdb.fit_predict(grads)
-    euclidean_outliers = hdb2.fit_predict(norms)
-    # Combine outlier predictions: a worker is Byzantine if flagged by either method
-    combined_outliers = (cosine_outliers == -1) & (euclidean_outliers == -1)
-    return int(np.sum(combined_outliers == -1))
+    if USE_CUML:
+        hdb = CumlHDBSCAN(metric='l2',
+                          cluster_selection_method='eom',
+                          allow_single_cluster=True)
+        labels = hdb.fit_predict(norms)
+        return int(cp.asnumpy(labels == -1).sum())
+    else:
+        hdb = SklearnHDBSCAN(metric='l2',
+                             cluster_selection_method='eom',
+                             allow_single_cluster=True,
+                             copy=True)
+        labels = hdb.fit_predict(norms)
+        return int(np.sum(labels == -1))
 
 
 def newMedian(epoch, gradients, net, lr, perturbation, f=0, byz=no_byz,
