@@ -87,13 +87,11 @@ def _compute_chunk_size(num_params, num_workers, bytes_per_row):
     return min(chunk_size, num_params)
 
 def compute_bytes_in_row(row):
-    """Compute memory usage in bytes for one row of the gradient matrix."""
+    """Return bytes per element (itemsize) for the gradient array dtype."""
     if isinstance(row, tf.Tensor):
-        return row.shape[0] * 4  # float32
-    elif isinstance(row, np.ndarray):
-        return row.nbytes
-    elif isinstance(row, cp.ndarray):
-        return row.nbytes
+        return row.dtype.size
+    elif isinstance(row, (np.ndarray, cp.ndarray)):
+        return row.itemsize
     else:
         raise ValueError("Unsupported type for computing bytes: {}".format(type(row)))
 
@@ -106,21 +104,21 @@ def estimate_b(grads, n):
     making it robust to non-IID norm variance among honest workers.
     """
     norms = np.linalg.norm(grads, axis=1, keepdims=True)
-    hdb = SklearnHDBSCAN(metric='cosine',
+    # hdb = SklearnHDBSCAN(metric='cosine',
+    #                      cluster_selection_method='eom',
+    #                      allow_single_cluster=True,
+    #                      copy=True)
+    
+    hdb2 = CumlHDBSCAN(metric='l2',
                          cluster_selection_method='eom',
                          allow_single_cluster=True,
                          copy=True)
     
-    hdb2 = SklearnHDBSCAN(metric='l2',
-                         cluster_selection_method='eom',
-                         allow_single_cluster=True,
-                         copy=True)
-    
-    cosine_outliers = hdb.fit_predict(grads)
+    # cosine_outliers = hdb.fit_predict(grads)
     euclidean_outliers = hdb2.fit_predict(norms)
     # Combine outlier predictions: a worker is Byzantine if flagged by either method
     combined_outliers = (cosine_outliers == -1) & (euclidean_outliers == -1)
-    return int(np.sum(combined_outliers))
+    return int(np.sum(combined_outliers == -1))
 
 
 def newMedian(epoch, gradients, net, lr, perturbation, f=0, byz=no_byz,

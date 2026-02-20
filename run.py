@@ -345,12 +345,13 @@ lr = [0.01]
 batchsize = [32]
 
 nworkers = [100]
-nbyz = [1]
+nbyz = [2]
 
 byz_type = ['none', 'gauss', 'label', 'trimAtt', 'krumAtt', 'scale', 'MinMax', 'MinSum', 'lie', 'modelReplace', 'modelReplaceAdapt', 'IPM']
 aggregation = ['newMedian'] #'mean', 'trim', 'median', 'krum', 
 
 perturbation = ['sgn']
+pretrain_epochs = 10
 
 gpu = [run_args.gpu]
 
@@ -384,6 +385,7 @@ for each_seed in seed:
                                                     + f" --byz_type={each_byz_type}"
                                                     + f" --aggregation={each_aggregation}"
                                                     + f" --perturbation={each_perturbation}"
+                                                    + f" --pretrain_epochs={pretrain_epochs}"
                                                     + f" --gpu={gpu[0]}"
                                                 )
                                                 if not run_args.verbose:
