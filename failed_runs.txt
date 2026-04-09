@@ -2857,3 +2857,495 @@ Failed: returncode=1 attempts=2 oom_detected=True
 Command: /home/richard/anaconda3/envs/federated-learning/bin/python3 train.py --dataset=Fashion --model=cnn --bias=0.5 --seed=0 --epochs=1 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=1000 --nbyz=1 --byz_type=krumAtt --aggregation=newMedian --perturbation=sgn --gpu=0 --quiet
 Stderr: out/logs/Fashion_0_cnn_krumAtt_newMedian_03b0a926_retry1.stderr
 
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplace --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_mlr_modelReplace_newMedian_f00ed3c5.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=scale --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_mlr_scale_newMedian_8fbf0d9d.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=krumAtt --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_mlr_krumAtt_newMedian_0fcb699b.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=gauss --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_mlr_gauss_newMedian_b9604c33_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=scale --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_mlr_scale_newMedian_8fbf0d9d_retry1.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplaceAdapt --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_mlr_modelReplaceAdapt_median_4fbe2e81.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=Fashion --model=cnn --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=IPM --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_4_cnn_IPM_median_b070af95.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=Fashion --model=cnn --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplaceAdapt --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_4_cnn_modelReplaceAdapt_krum_517f0d64.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=Fashion --model=cnn --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplace --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_4_cnn_modelReplace_krum_2db229d0.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=Fashion --model=cnn --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=lie --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_4_cnn_lie_krum_13d5af0f.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=Fashion --model=cnn --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinSum --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_4_cnn_MinSum_krum_b54f6bd4.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=Fashion --model=cnn --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=lie --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_4_cnn_lie_median_ddc274e5.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=Fashion --model=cnn --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinMax --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_4_cnn_MinMax_median_ac6a91ec.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=Fashion --model=cnn --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=krumAtt --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_4_cnn_krumAtt_median_ee530832.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=Fashion --model=cnn --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=trimAtt --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_4_cnn_trimAtt_krum_ce2cbd4a.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=Fashion --model=cnn --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=label --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_4_cnn_label_median_be60ab38.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=Fashion --model=cnn --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=none --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_4_cnn_none_median_d3d8963d.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=mnist --model=mlr --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplaceAdapt --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_4_mlr_modelReplaceAdapt_median_5165b847.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=mnist --model=mlr --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplace --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_4_mlr_modelReplace_krum_d6d3761a.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=mnist --model=mlr --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplaceAdapt --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_4_mlr_modelReplaceAdapt_krum_4bf2ef2f.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=gauss --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=1 --quiet
+Stderr: out/logs/cifar10_0_mlr_gauss_newMedian_a18c9a99_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=mnist --model=cnn --bias=0.5 --seed=2 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=gauss --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=1 --quiet
+Stderr: out/logs/mnist_2_cnn_gauss_newMedian_a850ff1b_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=mnist --model=resnet --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=IPM --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_0_resnet_IPM_krum_d2c4f566_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=label --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_mlr_label_median_9fbaee3d_retry1.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=mnist --model=cnn --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=lie --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_0_cnn_lie_median_41e3a269.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=cifar10 --model=cnn --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinMax --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_cnn_MinMax_krum_c222e438_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=mnist --model=cnn --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=label --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_0_cnn_label_krum_2aee8c57_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=mnist --model=resnet --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=trimAtt --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_0_resnet_trimAtt_krum_5b95eb33_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=mnist --model=cnn --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=scale --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_0_cnn_scale_median_05a9bdae_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=cifar10 --model=cnn --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinMax --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_1_cnn_MinMax_krum_6dae8252_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=cifar10 --model=resnet --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplace --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_1_resnet_modelReplace_median_9c2619b1_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=cifar10 --model=cnn --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinMax --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_1_cnn_MinMax_median_8ef0c9de_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=cifar10 --model=resnet --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinSum --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_1_resnet_MinSum_krum_a36dc3d5_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=mnist --model=resnet --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=gauss --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_1_resnet_gauss_median_4735db55_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=mnist --model=resnet --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinMax --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_1_resnet_MinMax_median_d749fbdb_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=Fashion --model=resnet --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplaceAdapt --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_1_resnet_modelReplaceAdapt_median_8dbe4745_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=Fashion --model=cnn --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinSum --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_1_cnn_MinSum_median_bcea67da_retry1.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=mnist --model=cnn --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinMax --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_0_cnn_MinMax_median_4a46bd60.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=mnist --model=cnn --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinMax --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_1_cnn_MinMax_median_5b3d52b5_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python3 train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=trimAtt --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_mlr_trimAtt_krum_774b95aa_retry1.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=Fashion --model=mlr --bias=0.5 --seed=3 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplace --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_3_mlr_modelReplace_newMedian_c411afb3.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=cnn --bias=0.5 --seed=2 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=gauss --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_2_cnn_gauss_newMedian_64926aa6.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=gauss --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_mlr_gauss_newMedian_573b81ae.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=mlr --bias=0.5 --seed=2 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplace --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_2_mlr_modelReplace_median_328c8e14.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=mlr --bias=0.5 --seed=2 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinSum --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_2_mlr_MinSum_krum_0e3e0850.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=resnet --bias=0.5 --seed=2 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinMax --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_2_resnet_MinMax_krum_6be9ea02_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=mlr --bias=0.5 --seed=2 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=krumAtt --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_2_mlr_krumAtt_median_e16de831_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=mlr --bias=0.5 --seed=2 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=scale --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_2_mlr_scale_median_1da478a9_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=mlr --bias=0.5 --seed=2 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinMax --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_2_mlr_MinMax_median_e11dd008_retry1.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=Fashion --model=mlr --bias=0.5 --seed=2 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=gauss --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_2_mlr_gauss_median_84b17402.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=Fashion --model=mlr --bias=0.5 --seed=2 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinMax --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_2_mlr_MinMax_krum_3f804770_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=3 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinSum --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_3_mlr_MinSum_krum_c3c648d0_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=Fashion --model=resnet --bias=0.5 --seed=2 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplaceAdapt --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_2_resnet_modelReplaceAdapt_krum_74e8f9d1_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=3 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplace --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_3_mlr_modelReplace_median_f085d04c_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=resnet --bias=0.5 --seed=3 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplaceAdapt --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_3_resnet_modelReplaceAdapt_krum_4c03dfdf_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=resnet --bias=0.5 --seed=3 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=scale --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_3_resnet_scale_krum_c8f01b0c_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=cnn --bias=0.5 --seed=3 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=krumAtt --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_3_cnn_krumAtt_median_151561f7_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=resnet --bias=0.5 --seed=3 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinSum --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_3_resnet_MinSum_krum_35403039_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=resnet --bias=0.5 --seed=3 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=none --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_3_resnet_none_median_d9969102_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=Fashion --model=cnn --bias=0.5 --seed=3 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplace --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_3_cnn_modelReplace_median_9f3c45e2_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=resnet --bias=0.5 --seed=3 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=trimAtt --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_3_resnet_trimAtt_median_db214bc4_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=resnet --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=IPM --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_4_resnet_IPM_median_c18c7925_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=cnn --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=trimAtt --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_4_cnn_trimAtt_median_b7c0535a_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=cnn --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplace --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_4_cnn_modelReplace_krum_493b64be_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=resnet --bias=0.5 --seed=3 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=trimAtt --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_3_resnet_trimAtt_krum_38a1e27a_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=Fashion --model=cnn --bias=0.5 --seed=3 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=gauss --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_3_cnn_gauss_krum_0fc5c137_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=cnn --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplace --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_4_cnn_modelReplace_median_a521d42e_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=resnet --bias=0.5 --seed=2 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=scale --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_2_resnet_scale_krum_d5fb6a0e_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=resnet --bias=0.5 --seed=3 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=label --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_3_resnet_label_median_560801f6_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=resnet --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=gauss --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_4_resnet_gauss_krum_c185c3f1_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=Fashion --model=resnet --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=trimAtt --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_4_resnet_trimAtt_median_b6bfa40a_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=resnet --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=gauss --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_4_resnet_gauss_median_226d3bfb_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=resnet --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplaceAdapt --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_4_resnet_modelReplaceAdapt_median_640ee45e_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=resnet --bias=0.5 --seed=3 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=scale --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_3_resnet_scale_median_a6d835b5_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=Fashion --model=resnet --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplaceAdapt --aggregation=krum --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_4_resnet_modelReplaceAdapt_krum_1344456f_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=Fashion --model=resnet --bias=0.5 --seed=4 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinMax --aggregation=median --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_4_resnet_MinMax_median_b66b33fe_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=IPM --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_0_mlr_IPM_newMedian_91eacc15_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=none --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_1_mlr_none_newMedian_74ac0a7a_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinMax --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_mlr_MinMax_newMedian_0eaf5ab0_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=gauss --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_1_mlr_gauss_newMedian_5a3fa04f_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=Fashion --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplace --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_0_mlr_modelReplace_newMedian_83fef542_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=lie --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_mlr_lie_newMedian_026bf6bc_retry1.stderr
+
+Failed: returncode=-6 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=cnn --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=lie --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_cnn_lie_newMedian_04323ee6_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=trimAtt --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_1_mlr_trimAtt_newMedian_cb24dc9d_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=label --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_1_mlr_label_newMedian_b4c53933_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=trimAtt --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_mlr_trimAtt_newMedian_756b53fd_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=cnn --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=trimAtt --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_0_cnn_trimAtt_newMedian_e595fa19_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=none --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_0_mlr_none_newMedian_264d3adb_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplace --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_0_mlr_modelReplace_newMedian_428b4490_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=cnn --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=scale --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_0_cnn_scale_newMedian_eac14e42_retry1.stderr
+
+Failed: returncode=1 attempts=1 oom_detected=False
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=mlr --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=lie --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_1_mlr_lie_newMedian_3bc86d4e.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplace --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_mlr_modelReplace_newMedian_a4bd59ee_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=cnn --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinMax --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_cnn_MinMax_newMedian_9156eaf8_retry1.stderr
+
+Failed: returncode=-6 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=cnn --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplace --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_cnn_modelReplace_newMedian_c4b9e15a_retry1.stderr
+
+Failed: returncode=-6 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=scale --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_1_mlr_scale_newMedian_8796dae0_retry1.stderr
+
+Failed: returncode=-6 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=gauss --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_mlr_gauss_newMedian_573b81ae_retry1.stderr
+
+Failed: returncode=-6 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinSum --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_mlr_MinSum_newMedian_6579d002_retry1.stderr
+
+Failed: returncode=-6 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=Fashion --model=resnet --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinMax --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_0_resnet_MinMax_newMedian_af90a59c_retry1.stderr
+
+Failed: returncode=-6 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinMax --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_1_mlr_MinMax_newMedian_5e94dd5e_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=label --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_mlr_label_newMedian_82e84e15_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplaceAdapt --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_mlr_modelReplaceAdapt_newMedian_93b778f1_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=mlr --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinMax --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_1_mlr_MinMax_newMedian_f049c659_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=Fashion --model=mlr --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplaceAdapt --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_1_mlr_modelReplaceAdapt_newMedian_1750a80a_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=trimAtt --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_0_mlr_trimAtt_newMedian_0f88ffb2_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=lie --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_0_mlr_lie_newMedian_be643d6d_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=cnn --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinMax --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_1_cnn_MinMax_newMedian_a2bf3c70_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=cnn --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=scale --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_cnn_scale_newMedian_402cb38e_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=Fashion --model=resnet --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=lie --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_1_resnet_lie_newMedian_9a2afd97_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=Fashion --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplaceAdapt --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_0_mlr_modelReplaceAdapt_newMedian_71969a84_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=Fashion --model=cnn --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplaceAdapt --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_0_cnn_modelReplaceAdapt_newMedian_45c064e8_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=cnn --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=none --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_0_cnn_none_newMedian_5f9380af_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=cnn --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinSum --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_cnn_MinSum_newMedian_065d9696_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=IPM --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_1_mlr_IPM_newMedian_a845c458_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=none --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_mlr_none_newMedian_2efc9c52_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=cnn --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=gauss --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_cnn_gauss_newMedian_827ab7a0_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=cnn --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=lie --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_0_cnn_lie_newMedian_136da757_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=krumAtt --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_mlr_krumAtt_newMedian_d4d0871c_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=IPM --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_0_mlr_IPM_newMedian_318969fe_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=cifar10 --model=mlr --bias=0.5 --seed=1 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=lie --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/cifar10_1_mlr_lie_newMedian_a713dcfa_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=gauss --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_0_mlr_gauss_newMedian_0c53ffbc_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=mlr --bias=0.5 --seed=2 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=MinSum --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_2_mlr_MinSum_newMedian_a6a26cbe_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=mnist --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=modelReplaceAdapt --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/mnist_0_mlr_modelReplaceAdapt_newMedian_9ac40cd9_retry1.stderr
+
+Failed: returncode=1 attempts=2 oom_detected=True
+Command: /home/rcdoug03/miniconda3/envs/federated-learning/bin/python train.py --dataset=Fashion --model=mlr --bias=0.5 --seed=0 --epochs=1000 --local_round=10 --lr=0.01 --batchsize=32 --nworkers=100 --nbyz=2 --byz_type=IPM --aggregation=newMedian --perturbation=sgn --pretrain_epochs=50 --gpu=0 --quiet
+Stderr: out/logs/Fashion_0_mlr_IPM_newMedian_dafdb6ce_retry1.stderr
+

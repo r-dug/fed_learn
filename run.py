@@ -20,6 +20,8 @@ parser.add_argument('--mem-per-exp', type=int, default=0, help='Estimated MB per
 parser.add_argument('--verbose', action='store_true', help='Show individual experiment output (use with --threads=1)')
 parser.add_argument('--resume', action='store_true', help='Skip experiments with existing non-empty output files')
 parser.add_argument('--oom-retries', type=int, default=1, help='Retry count after CUDA OOM (default 1)')
+parser.add_argument('--agg-set', type=int, default=1, help='Aggregation set to use (1 or 2)')
+parser.add_argument('--overwrite', action='store_true', help='Overwrite existing result files (use with caution)')
 run_args = parser.parse_args()
 
 
@@ -32,7 +34,7 @@ LAUNCH_LOCK = threading.Lock()
 DYNAMIC_LIMIT = 1
 ACTIVE_EXPERIMENTS = 0
 LAUNCH_PAUSE_SEC = 0.75
-WAIT_POLL_SEC = 3.0
+WAIT_POLL_SEC = 4.0
 
 
 OOM_PATTERNS = (
@@ -325,6 +327,46 @@ def run_if_mem(experiment, min_free_pct=0.25, verbose=False, gpu_num=0, oom_retr
     }
 
 
+def remove_existing_b_log(experiment:dict):
+    """Remove existing log file of byzantine estimations for newMedian if it exists to avoid confusion with new runs."""
+    # b log format is such: out/b_log_0_cifar10_trimAtt_newMedian.txt
+    b_log_path = os.path.join('out', f"b_log_{experiment['seed']}_{experiment['dataset']}_{experiment['byz_type']}_{experiment['aggregation']}.txt")
+    if os.path.isfile(b_log_path):
+        os.remove(b_log_path)
+
+def refresh_run_logs():
+    """Remove all existing error logs for this run to avoid confusion with new runs."""
+    if os.path.isdir(LOG_DIR):
+        for filename in os.listdir(LOG_DIR):
+            if filename.endswith('.stderr'):
+                file_path = os.path.join(LOG_DIR, filename)
+                os.remove(file_path)
+refresh_run_logs()
+
+def skip_experiment(experiment:dict)->bool:
+    """
+    Check if the result file for this experiment already exists and is length of epochs.
+    """
+    result_path = experiment['result_path']
+    epochs = experiment['epochs']
+    if not os.path.isfile(result_path):
+        return False
+    with open(result_path, 'r') as f:
+        lines = f.readlines()
+        if len(lines) >= (epochs//10) and not run_args.overwrite:
+            print(f"Existing result file {result_path} has run to completion, skipping experiment.")
+            return True
+        elif len(lines) >= (epochs//10) and run_args.overwrite:
+            print(f"Existing result file {result_path} has run to completion, but --overwrite is set. Will re-run experiment and overwrite existing file.")
+            return False
+        else:
+            print(f"Existing result file {result_path} has {len(lines)} lines, expected {epochs//10}. Will re-run experiment.")
+            # remove the incomplete result file to avoid confusion
+            os.remove(result_path)
+            if experiment['aggregation'] == 'newMedian':
+                remove_existing_b_log(experiment)
+            return False
+
 # =============================================================================
 # EXPERIMENT CONFIGURATION
 # =============================================================================
@@ -335,7 +377,7 @@ if run_args.quick:
     epochs = [1]
 else:
     seed = [0, 1, 2, 3, 4]
-    epochs = [2500]
+    epochs = [1000]
 
 dataset = ['cifar10', 'mnist', 'Fashion']
 model = ['resnet', 'cnn', 'mlr']
@@ -348,10 +390,10 @@ nworkers = [100]
 nbyz = [2]
 
 byz_type = ['none', 'gauss', 'label', 'trimAtt', 'krumAtt', 'scale', 'MinMax', 'MinSum', 'lie', 'modelReplace', 'modelReplaceAdapt', 'IPM']
-aggregation = ['newMedian'] #'mean', 'trim', 'median', 'krum', 
 
+aggregation = ['newMedian'] # 'mean', 'newMedian', 'trim', 'median', 'krum'
 perturbation = ['sgn']
-pretrain_epochs = 10
+pretrain_epochs = 50
 
 gpu = [run_args.gpu]
 
@@ -408,7 +450,8 @@ for each_seed in seed:
                                                     'perturbation': each_perturbation,
                                                 }
                                                 exp['result_path'] = make_result_path(exp)
-                                                all_experiments.append(exp)
+                                                if not skip_experiment(exp):
+                                                    all_experiments.append(exp)
 
 def estimate_experiment_log_size(epochs:int)->int:
     """create a temp log file and measure its size to estimate the log size for a given number of epochs"""
@@ -424,18 +467,9 @@ def estimate_experiment_log_size(epochs:int)->int:
         tmp.flush()
         size = os.path.getsize(tmp.name)
     os.remove(tmp.name)
-    return size    
+    return size
 
 experiments = all_experiments
-skipped_existing = 0
-if run_args.resume:
-    pending = []
-    for exp in experiments:
-        if os.path.isfile(exp['result_path']) and os.path.getsize(exp['result_path']) > 0:
-            skipped_existing += 1
-        else:
-            pending.append(exp)
-    experiments = pending
 
 # =============================================================================
 # DETERMINE THREAD COUNT (deferred — needs experiment list for auto-detect probe)

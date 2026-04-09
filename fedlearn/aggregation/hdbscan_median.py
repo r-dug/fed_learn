@@ -77,7 +77,7 @@ def _compute_chunk_size(num_params, num_workers, bytes_per_row):
     The main GPU memory overhead comes from the distance matrix (W, D) of absolute differences, which is W * D * 4 bytes for float32.  We want to choose
     """
     #  target memory overhead should be less than a fraction of avail gpu memory
-    #  we can get the available GPU memory using cp.cuda.Device().mem_info[0] (free memory in bytes)
+    #  we get the available GPU memory using cp.cuda.Device().mem_info[0] (free memory in bytes)
     try:
         free_memory = cp.cuda.Device().mem_info[0]
         target_mb = free_memory / (1024 * 1024 * 2)  # Use half of available GPU memory
@@ -103,12 +103,17 @@ def estimate_b(grads, n):
     Cosine distance captures directional outliers regardless of gradient magnitude,
     making it robust to non-IID norm variance among honest workers.
     """
+    #  TODO: run with euclidean distance from l2 norms
+    #  equivalent to clustering using cosine distance on the original gradients, but much faster since it's 1-D
+
     norms = np.linalg.norm(grads, axis=1, keepdims=True)
     if USE_CUML:
-        hdb = CumlHDBSCAN(metric='l2',
+        hdb = CumlHDBSCAN(metric='euclidean',
                           cluster_selection_method='eom',
                           allow_single_cluster=True)
         labels = hdb.fit_predict(norms)
+        # TODO: return the actual outlier indices instead of just the count, 
+        # so we can exclude them from the median selection instead of just trimming f workers
         return int(cp.asnumpy(labels == -1).sum())
     else:
         hdb = SklearnHDBSCAN(metric='l2',
